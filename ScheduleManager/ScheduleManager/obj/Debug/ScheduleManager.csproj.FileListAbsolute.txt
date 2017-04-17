@@ -1,1 +1,13 @@
 C:\Users\Demcom\Documents\Projects\Itt\ScheduleManager\ScheduleManager\bin\Debug\ScheduleManager.exe.config
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\bin\Debug\ScheduleManager.exe.config
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\bin\Debug\ScheduleManager.exe
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\bin\Debug\ScheduleManager.pdb
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\obj\Debug\ScheduleManager.csprojResolveAssemblyReference.cache
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\obj\Debug\ScheduleManager.Form1.resources
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\obj\Debug\ScheduleManager.Properties.Resources.resources
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\obj\Debug\ScheduleManager.csproj.GenerateResource.Cache
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\obj\Debug\ScheduleManager.exe
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\obj\Debug\ScheduleManager.pdb
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\bin\Debug\Excel.dll
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Demcom\Desktop\SERVICIO\SchoolScheduleManager\ScheduleManager\ScheduleManager\bin\Debug\Excel.pdb
