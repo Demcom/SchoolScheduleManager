@@ -21,6 +21,8 @@ namespace ScheduleManager
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            //FileBrowser is a Singleton to get the path of a file as patametters it takes the file format
             FileBrowser.Instance.getFilePathWithFormat(FileFormatsEnum.EXCELFILES);
         }
     }
