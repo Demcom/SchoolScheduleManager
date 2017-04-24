@@ -8,7 +8,7 @@ namespace ScheduleManager.enums
 {
     static class FileFormatsEnum
     {
-        public static string EXCELFILES { get { return "Excel Worksheets|*.xls"; } }
+        public static string EXCELFILES { get { return "Excel Worksheets|*.xls|Excel Worksheets|*.xlsx"; } }
         public static string ALLFILES { get { return "All Files| *.* "; } }
 
         

@@ -8,7 +8,7 @@ namespace ScheduleManager.interfaces
 {
     interface IExcelReader
     {
-        void ReadExcel();
-        void RenderExcel();
+        void readExcel();
+        void renderExcel();
     }
 }

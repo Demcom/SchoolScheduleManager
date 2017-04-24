@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using ScheduleManager.enums;
 using System.Windows.Forms;
 using ScheduleManager.common;
+using ScheduleManager.tools;
 
 namespace ScheduleManager
 {
@@ -22,8 +23,13 @@ namespace ScheduleManager
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            //FileBrowser is a Singleton to get the path of a file as patametters it takes the file format
-            FileBrowser.Instance.getFilePathWithFormat(FileFormatsEnum.EXCELFILES);
+            ExcelReader excelReader = new ExcelReader();
+            excelReader.readExcel();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
