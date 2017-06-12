@@ -12,13 +12,17 @@ namespace ScheduleManager.model
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Personal
     {
-        public int id_usuario { get; set; }
-        public string nombre_usuario { get; set; }
-        public int id_cuenta { get; set; }
-        public string contraseña_usuarios { get; set; }
-    
-        public virtual Cuenta Cuenta { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> ccdepcve { get; set; }
+        public Nullable<int> ccperdepa { get; set; }
+        public int ccpercve { get; set; }
+        public int ccpertar { get; set; }
+        public string ccpernom { get; set; }
+        public Nullable<System.DateTime> ccperara { get; set; }
+        public string cctitnco { get; set; }
+        public Nullable<int> ccesrced { get; set; }
+        public string ccperrfc { get; set; }
     }
 }

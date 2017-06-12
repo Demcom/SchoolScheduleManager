@@ -12,6 +12,21 @@
           <Property Name="id_cuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre_cuenta" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ccdepcve" Type="int" />
+          <Property Name="ccperdepa" Type="int" />
+          <Property Name="ccpercve" Type="int" Nullable="false" />
+          <Property Name="ccpertar" Type="int" Nullable="false" />
+          <Property Name="ccpernom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ccperara" Type="date" />
+          <Property Name="cctitnco" Type="varchar" MaxLength="50" />
+          <Property Name="ccesrced" Type="int" />
+          <Property Name="ccperrfc" Type="varchar" MaxLength="15" />
+        </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="id_usuario" />
@@ -59,6 +74,7 @@
         </Association>
         <EntityContainer Name="ScheduleManagerModelStoreContainer">
           <EntitySet Name="Cuentas" EntityType="Self.Cuentas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Usuarios__id_cue__25869641" Association="Self.FK__Usuarios__id_cue__25869641">
             <End Role="Cuentas" EntitySet="Cuentas" />
@@ -114,7 +130,23 @@
             <End Role="Cuentas" EntitySet="Cuentas" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
+          <EntitySet Name="Personals" EntityType="ScheduleManagerModel.Personal" />
         </EntityContainer>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ccdepcve" Type="Int32" />
+          <Property Name="ccperdepa" Type="Int32" />
+          <Property Name="ccpercve" Type="Int32" Nullable="false" />
+          <Property Name="ccpertar" Type="Int32" Nullable="false" />
+          <Property Name="ccpernom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ccperara" Type="DateTime" Precision="0" />
+          <Property Name="cctitnco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ccesrced" Type="Int32" />
+          <Property Name="ccperrfc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -136,6 +168,22 @@
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
                 <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
                 <ScalarProperty Name="id_cuenta" ColumnName="id_cuenta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals">
+            <EntityTypeMapping TypeName="ScheduleManagerModel.Personal">
+              <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="ccperrfc" ColumnName="ccperrfc" />
+                <ScalarProperty Name="ccesrced" ColumnName="ccesrced" />
+                <ScalarProperty Name="cctitnco" ColumnName="cctitnco" />
+                <ScalarProperty Name="ccperara" ColumnName="ccperara" />
+                <ScalarProperty Name="ccpernom" ColumnName="ccpernom" />
+                <ScalarProperty Name="ccpertar" ColumnName="ccpertar" />
+                <ScalarProperty Name="ccpercve" ColumnName="ccpercve" />
+                <ScalarProperty Name="ccperdepa" ColumnName="ccperdepa" />
+                <ScalarProperty Name="ccdepcve" ColumnName="ccdepcve" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

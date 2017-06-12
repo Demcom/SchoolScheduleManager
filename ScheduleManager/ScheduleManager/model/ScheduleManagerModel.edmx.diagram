@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="ScheduleManagerModel.Cuenta" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ScheduleManagerModel.Usuario" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="ScheduleManagerModel.FK__Usuarios__id_cue__25869641" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ScheduleManagerModel.Personal" Width="1.5" PointX="6.625" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
