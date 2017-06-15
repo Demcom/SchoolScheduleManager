@@ -16,7 +16,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ccdepcve" Type="int" />
           <Property Name="ccperdepa" Type="int" />
           <Property Name="ccpercve" Type="int" Nullable="false" />
@@ -136,7 +136,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ccdepcve" Type="Int32" />
           <Property Name="ccperdepa" Type="Int32" />
           <Property Name="ccpercve" Type="Int32" Nullable="false" />
