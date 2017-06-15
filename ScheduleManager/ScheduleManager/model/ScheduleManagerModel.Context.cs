@@ -28,5 +28,8 @@ namespace ScheduleManager.model
         public virtual DbSet<Cuenta> Cuentas { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Personal> Personals { get; set; }
+        public virtual DbSet<Distribucion> Distribucion { get; set; }
+        public virtual DbSet<Estructura> Estructura { get; set; }
+        public virtual DbSet<PersonalFrenteAGrupo> PersonalFrenteAGrupo { get; set; }
     }
 }

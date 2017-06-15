@@ -12,20 +12,131 @@
           <Property Name="id_cuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre_cuenta" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
+        <EntityType Name="Distribucion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ccdepcve" Type="int" />
+          <Property Name="ccpercve" Type="int" Nullable="false" />
+          <Property Name="ccpertar" Type="int" />
+          <Property Name="ccpernom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="cccve" Type="varchar" MaxLength="50" />
+          <Property Name="cchrst" Type="int" Nullable="false" />
+          <Property Name="ccdes" Type="int" Nullable="false" />
+          <Property Name="cceso" Type="int" Nullable="false" />
+          <Property Name="ccnmat" Type="int" Nullable="false" />
+          <Property Name="ccmath" Type="int" Nullable="false" />
+          <Property Name="ccexc" Type="int" Nullable="false" />
+          <Property Name="ccmot" Type="varchar" MaxLength="50" />
+          <Property Name="ccperara" Type="date" />
+          <Property Name="cctitnco" Type="varchar" MaxLength="50" />
+          <Property Name="ccesrced" Type="int" />
+          <Property Name="cccar1a" Type="int" Nullable="false" />
+          <Property Name="cccar1b" Type="int" Nullable="false" />
+          <Property Name="cccar2a" Type="int" Nullable="false" />
+          <Property Name="cccar2b" Type="int" Nullable="false" />
+          <Property Name="cccar3a" Type="int" Nullable="false" />
+          <Property Name="cccar3b" Type="int" Nullable="false" />
+          <Property Name="cccar4a" Type="int" Nullable="false" />
+          <Property Name="cccar4b" Type="int" Nullable="false" />
+          <Property Name="cccar5a" Type="int" Nullable="false" />
+          <Property Name="cccar5b" Type="int" Nullable="false" />
+          <Property Name="cccar6a" Type="int" Nullable="false" />
+          <Property Name="cccar6b" Type="int" Nullable="false" />
+          <Property Name="cccar7a" Type="int" Nullable="false" />
+          <Property Name="cccar7b" Type="int" Nullable="false" />
+          <Property Name="cccar8a" Type="int" Nullable="false" />
+          <Property Name="cccar8b" Type="int" Nullable="false" />
+          <Property Name="cccar9a" Type="int" Nullable="false" />
+          <Property Name="cccar9b" Type="int" Nullable="false" />
+          <Property Name="cccar10a" Type="int" Nullable="false" />
+          <Property Name="cccar10b" Type="int" Nullable="false" />
+          <Property Name="ccpdo1a" Type="int" Nullable="false" />
+          <Property Name="ccpdo1b" Type="int" Nullable="false" />
+          <Property Name="ccpdo2a" Type="int" Nullable="false" />
+          <Property Name="ccpdo2b" Type="int" Nullable="false" />
+          <Property Name="ccpdo3a" Type="int" Nullable="false" />
+          <Property Name="ccpdo3b" Type="int" Nullable="false" />
+          <Property Name="ccpdo4a" Type="int" Nullable="false" />
+          <Property Name="ccpdo4b" Type="int" Nullable="false" />
+          <Property Name="ccpdo5a" Type="int" Nullable="false" />
+          <Property Name="ccpdo5b" Type="int" Nullable="false" />
+          <Property Name="ccpdo6a" Type="int" Nullable="false" />
+          <Property Name="ccpdo6b" Type="int" Nullable="false" />
+          <Property Name="ccpdo7a" Type="int" Nullable="false" />
+          <Property Name="ccpdo7b" Type="int" Nullable="false" />
+          <Property Name="ccpdo8a" Type="int" Nullable="false" />
+          <Property Name="ccpdo8b" Type="int" Nullable="false" />
+          <Property Name="ccpdo9a" Type="int" Nullable="false" />
+          <Property Name="ccpdo9b" Type="int" Nullable="false" />
+          <Property Name="ccpdo10a" Type="int" Nullable="false" />
+          <Property Name="ccpdo10b" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estructura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ccdepcve" Type="int" />
+          <Property Name="ccpercve" Type="int" Nullable="false" />
+          <Property Name="ccpertar" Type="int" Nullable="false" />
+          <Property Name="ccpernom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ccplmcve" Type="int" Nullable="false" />
+          <Property Name="ccperara" Type="date" Nullable="false" />
+          <Property Name="cccatcve" Type="varchar" MaxLength="6" />
+          <Property Name="ccplmhrs" Type="int" Nullable="false" />
+          <Property Name="cchfglic" Type="int" Nullable="false" />
+          <Property Name="cchgpos" Type="int" Nullable="false" />
+          <Property Name="ccdes" Type="int" Nullable="false" />
+          <Property Name="ccfac" Type="bit" />
+          <Property Name="ccmot" Type="varchar" MaxLength="50" />
+          <Property Name="ccmatcve" Type="varchar" MaxLength="20" />
+          <Property Name="ccmatnco" Type="varchar" MaxLength="20" />
+          <Property Name="ccmathte" Type="int" Nullable="false" />
+          <Property Name="ccmathpr" Type="int" Nullable="false" />
+          <Property Name="ccngp" Type="int" Nullable="false" />
+          <Property Name="cccarnco" Type="varchar" MaxLength="20" />
+          <Property Name="cctitnco" Type="varchar" MaxLength="50" />
+          <Property Name="ccesrced" Type="int" />
+          <Property Name="ccperrfc" Type="varchar" MaxLength="15" />
+          <Property Name="ccacdnco" Type="varchar" MaxLength="30" />
+          <Property Name="ccacdhrs" Type="int" Nullable="false" />
+          <Property Name="ccmatnom" Type="varchar" MaxLength="70" />
+        </EntityType>
         <EntityType Name="Personal">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ccdepcve" Type="int" />
           <Property Name="ccperdepa" Type="int" />
           <Property Name="ccpercve" Type="int" Nullable="false" />
-          <Property Name="ccpertar" Type="int" Nullable="false" />
+          <Property Name="ccpertar" Type="int" />
           <Property Name="ccpernom" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ccperara" Type="date" />
           <Property Name="cctitnco" Type="varchar" MaxLength="50" />
           <Property Name="ccesrced" Type="int" />
           <Property Name="ccperrfc" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="PersonalFrenteAGrupo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ccdepcve" Type="int" />
+          <Property Name="ccpercve" Type="int" Nullable="false" />
+          <Property Name="ccpertar" Type="int" />
+          <Property Name="ccpernom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="cccve" Type="varchar" MaxLength="50" />
+          <Property Name="cchrst" Type="int" Nullable="false" />
+          <Property Name="ccdes" Type="int" Nullable="false" />
+          <Property Name="cceso" Type="int" Nullable="false" />
+          <Property Name="ccmat" Type="int" Nullable="false" />
+          <Property Name="ccnmat" Type="int" Nullable="false" />
+          <Property Name="ccmath" Type="int" Nullable="false" />
+          <Property Name="ccexc" Type="int" Nullable="false" />
+          <Property Name="ccmot" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -74,7 +185,10 @@
         </Association>
         <EntityContainer Name="ScheduleManagerModelStoreContainer">
           <EntitySet Name="Cuentas" EntityType="Self.Cuentas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Distribucion" EntityType="Self.Distribucion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estructura" EntityType="Self.Estructura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonalFrenteAGrupo" EntityType="Self.PersonalFrenteAGrupo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Usuarios__id_cue__25869641" Association="Self.FK__Usuarios__id_cue__25869641">
             <End Role="Cuentas" EntitySet="Cuentas" />
@@ -131,6 +245,9 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
           <EntitySet Name="Personals" EntityType="ScheduleManagerModel.Personal" />
+          <EntitySet Name="Distribucion" EntityType="ScheduleManagerModel.Distribucion" />
+          <EntitySet Name="Estructura" EntityType="ScheduleManagerModel.Estructura" />
+          <EntitySet Name="PersonalFrenteAGrupo" EntityType="ScheduleManagerModel.PersonalFrenteAGrupo" />
         </EntityContainer>
         <EntityType Name="Personal">
           <Key>
@@ -140,12 +257,123 @@
           <Property Name="ccdepcve" Type="Int32" />
           <Property Name="ccperdepa" Type="Int32" />
           <Property Name="ccpercve" Type="Int32" Nullable="false" />
-          <Property Name="ccpertar" Type="Int32" Nullable="false" />
+          <Property Name="ccpertar" Type="Int32" />
           <Property Name="ccpernom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ccperara" Type="DateTime" Precision="0" />
           <Property Name="cctitnco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ccesrced" Type="Int32" />
           <Property Name="ccperrfc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Distribucion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ccdepcve" Type="Int32" />
+          <Property Name="ccpercve" Type="Int32" Nullable="false" />
+          <Property Name="ccpertar" Type="Int32" />
+          <Property Name="ccpernom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cccve" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cchrst" Type="Int32" Nullable="false" />
+          <Property Name="ccdes" Type="Int32" Nullable="false" />
+          <Property Name="cceso" Type="Int32" Nullable="false" />
+          <Property Name="ccnmat" Type="Int32" Nullable="false" />
+          <Property Name="ccmath" Type="Int32" Nullable="false" />
+          <Property Name="ccexc" Type="Int32" Nullable="false" />
+          <Property Name="ccmot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ccperara" Type="DateTime" Precision="0" />
+          <Property Name="cctitnco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ccesrced" Type="Int32" />
+          <Property Name="cccar1a" Type="Int32" Nullable="false" />
+          <Property Name="cccar1b" Type="Int32" Nullable="false" />
+          <Property Name="cccar2a" Type="Int32" Nullable="false" />
+          <Property Name="cccar2b" Type="Int32" Nullable="false" />
+          <Property Name="cccar3a" Type="Int32" Nullable="false" />
+          <Property Name="cccar3b" Type="Int32" Nullable="false" />
+          <Property Name="cccar4a" Type="Int32" Nullable="false" />
+          <Property Name="cccar4b" Type="Int32" Nullable="false" />
+          <Property Name="cccar5a" Type="Int32" Nullable="false" />
+          <Property Name="cccar5b" Type="Int32" Nullable="false" />
+          <Property Name="cccar6a" Type="Int32" Nullable="false" />
+          <Property Name="cccar6b" Type="Int32" Nullable="false" />
+          <Property Name="cccar7a" Type="Int32" Nullable="false" />
+          <Property Name="cccar7b" Type="Int32" Nullable="false" />
+          <Property Name="cccar8a" Type="Int32" Nullable="false" />
+          <Property Name="cccar8b" Type="Int32" Nullable="false" />
+          <Property Name="cccar9a" Type="Int32" Nullable="false" />
+          <Property Name="cccar9b" Type="Int32" Nullable="false" />
+          <Property Name="cccar10a" Type="Int32" Nullable="false" />
+          <Property Name="cccar10b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo1a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo1b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo2a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo2b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo3a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo3b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo4a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo4b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo5a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo5b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo6a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo6b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo7a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo7b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo8a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo8b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo9a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo9b" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo10a" Type="Int32" Nullable="false" />
+          <Property Name="ccpdo10b" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estructura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ccdepcve" Type="Int32" />
+          <Property Name="ccpercve" Type="Int32" Nullable="false" />
+          <Property Name="ccpertar" Type="Int32" Nullable="false" />
+          <Property Name="ccpernom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ccplmcve" Type="Int32" Nullable="false" />
+          <Property Name="ccperara" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cccatcve" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ccplmhrs" Type="Int32" Nullable="false" />
+          <Property Name="cchfglic" Type="Int32" Nullable="false" />
+          <Property Name="cchgpos" Type="Int32" Nullable="false" />
+          <Property Name="ccdes" Type="Int32" Nullable="false" />
+          <Property Name="ccfac" Type="Boolean" />
+          <Property Name="ccmot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ccmatcve" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ccmatnco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ccmathte" Type="Int32" Nullable="false" />
+          <Property Name="ccmathpr" Type="Int32" Nullable="false" />
+          <Property Name="ccngp" Type="Int32" Nullable="false" />
+          <Property Name="cccarnco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cctitnco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ccesrced" Type="Int32" />
+          <Property Name="ccperrfc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ccacdnco" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ccacdhrs" Type="Int32" Nullable="false" />
+          <Property Name="ccmatnom" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PersonalFrenteAGrupo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ccdepcve" Type="Int32" />
+          <Property Name="ccpercve" Type="Int32" Nullable="false" />
+          <Property Name="ccpertar" Type="Int32" />
+          <Property Name="ccpernom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cccve" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cchrst" Type="Int32" Nullable="false" />
+          <Property Name="ccdes" Type="Int32" Nullable="false" />
+          <Property Name="cceso" Type="Int32" Nullable="false" />
+          <Property Name="ccmat" Type="Int32" Nullable="false" />
+          <Property Name="ccnmat" Type="Int32" Nullable="false" />
+          <Property Name="ccmath" Type="Int32" Nullable="false" />
+          <Property Name="ccexc" Type="Int32" Nullable="false" />
+          <Property Name="ccmot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -187,6 +415,120 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Distribucion">
+            <EntityTypeMapping TypeName="ScheduleManagerModel.Distribucion">
+              <MappingFragment StoreEntitySet="Distribucion">
+                <ScalarProperty Name="ccpdo10b" ColumnName="ccpdo10b" />
+                <ScalarProperty Name="ccpdo10a" ColumnName="ccpdo10a" />
+                <ScalarProperty Name="ccpdo9b" ColumnName="ccpdo9b" />
+                <ScalarProperty Name="ccpdo9a" ColumnName="ccpdo9a" />
+                <ScalarProperty Name="ccpdo8b" ColumnName="ccpdo8b" />
+                <ScalarProperty Name="ccpdo8a" ColumnName="ccpdo8a" />
+                <ScalarProperty Name="ccpdo7b" ColumnName="ccpdo7b" />
+                <ScalarProperty Name="ccpdo7a" ColumnName="ccpdo7a" />
+                <ScalarProperty Name="ccpdo6b" ColumnName="ccpdo6b" />
+                <ScalarProperty Name="ccpdo6a" ColumnName="ccpdo6a" />
+                <ScalarProperty Name="ccpdo5b" ColumnName="ccpdo5b" />
+                <ScalarProperty Name="ccpdo5a" ColumnName="ccpdo5a" />
+                <ScalarProperty Name="ccpdo4b" ColumnName="ccpdo4b" />
+                <ScalarProperty Name="ccpdo4a" ColumnName="ccpdo4a" />
+                <ScalarProperty Name="ccpdo3b" ColumnName="ccpdo3b" />
+                <ScalarProperty Name="ccpdo3a" ColumnName="ccpdo3a" />
+                <ScalarProperty Name="ccpdo2b" ColumnName="ccpdo2b" />
+                <ScalarProperty Name="ccpdo2a" ColumnName="ccpdo2a" />
+                <ScalarProperty Name="ccpdo1b" ColumnName="ccpdo1b" />
+                <ScalarProperty Name="ccpdo1a" ColumnName="ccpdo1a" />
+                <ScalarProperty Name="cccar10b" ColumnName="cccar10b" />
+                <ScalarProperty Name="cccar10a" ColumnName="cccar10a" />
+                <ScalarProperty Name="cccar9b" ColumnName="cccar9b" />
+                <ScalarProperty Name="cccar9a" ColumnName="cccar9a" />
+                <ScalarProperty Name="cccar8b" ColumnName="cccar8b" />
+                <ScalarProperty Name="cccar8a" ColumnName="cccar8a" />
+                <ScalarProperty Name="cccar7b" ColumnName="cccar7b" />
+                <ScalarProperty Name="cccar7a" ColumnName="cccar7a" />
+                <ScalarProperty Name="cccar6b" ColumnName="cccar6b" />
+                <ScalarProperty Name="cccar6a" ColumnName="cccar6a" />
+                <ScalarProperty Name="cccar5b" ColumnName="cccar5b" />
+                <ScalarProperty Name="cccar5a" ColumnName="cccar5a" />
+                <ScalarProperty Name="cccar4b" ColumnName="cccar4b" />
+                <ScalarProperty Name="cccar4a" ColumnName="cccar4a" />
+                <ScalarProperty Name="cccar3b" ColumnName="cccar3b" />
+                <ScalarProperty Name="cccar3a" ColumnName="cccar3a" />
+                <ScalarProperty Name="cccar2b" ColumnName="cccar2b" />
+                <ScalarProperty Name="cccar2a" ColumnName="cccar2a" />
+                <ScalarProperty Name="cccar1b" ColumnName="cccar1b" />
+                <ScalarProperty Name="cccar1a" ColumnName="cccar1a" />
+                <ScalarProperty Name="ccesrced" ColumnName="ccesrced" />
+                <ScalarProperty Name="cctitnco" ColumnName="cctitnco" />
+                <ScalarProperty Name="ccperara" ColumnName="ccperara" />
+                <ScalarProperty Name="ccmot" ColumnName="ccmot" />
+                <ScalarProperty Name="ccexc" ColumnName="ccexc" />
+                <ScalarProperty Name="ccmath" ColumnName="ccmath" />
+                <ScalarProperty Name="ccnmat" ColumnName="ccnmat" />
+                <ScalarProperty Name="cceso" ColumnName="cceso" />
+                <ScalarProperty Name="ccdes" ColumnName="ccdes" />
+                <ScalarProperty Name="cchrst" ColumnName="cchrst" />
+                <ScalarProperty Name="cccve" ColumnName="cccve" />
+                <ScalarProperty Name="ccpernom" ColumnName="ccpernom" />
+                <ScalarProperty Name="ccpertar" ColumnName="ccpertar" />
+                <ScalarProperty Name="ccpercve" ColumnName="ccpercve" />
+                <ScalarProperty Name="ccdepcve" ColumnName="ccdepcve" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estructura">
+            <EntityTypeMapping TypeName="ScheduleManagerModel.Estructura">
+              <MappingFragment StoreEntitySet="Estructura">
+                <ScalarProperty Name="ccmatnom" ColumnName="ccmatnom" />
+                <ScalarProperty Name="ccacdhrs" ColumnName="ccacdhrs" />
+                <ScalarProperty Name="ccacdnco" ColumnName="ccacdnco" />
+                <ScalarProperty Name="ccperrfc" ColumnName="ccperrfc" />
+                <ScalarProperty Name="ccesrced" ColumnName="ccesrced" />
+                <ScalarProperty Name="cctitnco" ColumnName="cctitnco" />
+                <ScalarProperty Name="cccarnco" ColumnName="cccarnco" />
+                <ScalarProperty Name="ccngp" ColumnName="ccngp" />
+                <ScalarProperty Name="ccmathpr" ColumnName="ccmathpr" />
+                <ScalarProperty Name="ccmathte" ColumnName="ccmathte" />
+                <ScalarProperty Name="ccmatnco" ColumnName="ccmatnco" />
+                <ScalarProperty Name="ccmatcve" ColumnName="ccmatcve" />
+                <ScalarProperty Name="ccmot" ColumnName="ccmot" />
+                <ScalarProperty Name="ccfac" ColumnName="ccfac" />
+                <ScalarProperty Name="ccdes" ColumnName="ccdes" />
+                <ScalarProperty Name="cchgpos" ColumnName="cchgpos" />
+                <ScalarProperty Name="cchfglic" ColumnName="cchfglic" />
+                <ScalarProperty Name="ccplmhrs" ColumnName="ccplmhrs" />
+                <ScalarProperty Name="cccatcve" ColumnName="cccatcve" />
+                <ScalarProperty Name="ccperara" ColumnName="ccperara" />
+                <ScalarProperty Name="ccplmcve" ColumnName="ccplmcve" />
+                <ScalarProperty Name="ccpernom" ColumnName="ccpernom" />
+                <ScalarProperty Name="ccpertar" ColumnName="ccpertar" />
+                <ScalarProperty Name="ccpercve" ColumnName="ccpercve" />
+                <ScalarProperty Name="ccdepcve" ColumnName="ccdepcve" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonalFrenteAGrupo">
+            <EntityTypeMapping TypeName="ScheduleManagerModel.PersonalFrenteAGrupo">
+              <MappingFragment StoreEntitySet="PersonalFrenteAGrupo">
+                <ScalarProperty Name="ccmot" ColumnName="ccmot" />
+                <ScalarProperty Name="ccexc" ColumnName="ccexc" />
+                <ScalarProperty Name="ccmath" ColumnName="ccmath" />
+                <ScalarProperty Name="ccnmat" ColumnName="ccnmat" />
+                <ScalarProperty Name="ccmat" ColumnName="ccmat" />
+                <ScalarProperty Name="cceso" ColumnName="cceso" />
+                <ScalarProperty Name="ccdes" ColumnName="ccdes" />
+                <ScalarProperty Name="cchrst" ColumnName="cchrst" />
+                <ScalarProperty Name="cccve" ColumnName="cccve" />
+                <ScalarProperty Name="ccpernom" ColumnName="ccpernom" />
+                <ScalarProperty Name="ccpertar" ColumnName="ccpertar" />
+                <ScalarProperty Name="ccpercve" ColumnName="ccpercve" />
+                <ScalarProperty Name="ccdepcve" ColumnName="ccdepcve" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -201,7 +543,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

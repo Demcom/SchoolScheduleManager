@@ -108,7 +108,16 @@
     <Compile Include="model\Cuenta.cs">
       <DependentUpon>ScheduleManagerModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="model\Distribucion.cs">
+      <DependentUpon>ScheduleManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Estructura.cs">
+      <DependentUpon>ScheduleManagerModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="model\Personal.cs">
+      <DependentUpon>ScheduleManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\PersonalFrenteAGrupo.cs">
       <DependentUpon>ScheduleManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="model\ScheduleManagerModel.Context.cs">

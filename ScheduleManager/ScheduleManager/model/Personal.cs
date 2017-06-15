@@ -18,7 +18,7 @@ namespace ScheduleManager.model
         public Nullable<int> ccdepcve { get; set; }
         public Nullable<int> ccperdepa { get; set; }
         public int ccpercve { get; set; }
-        public int ccpertar { get; set; }
+        public Nullable<int> ccpertar { get; set; }
         public string ccpernom { get; set; }
         public Nullable<System.DateTime> ccperara { get; set; }
         public string cctitnco { get; set; }
