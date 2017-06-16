@@ -23,7 +23,6 @@ namespace ScheduleManager.model
         public int cchrst { get; set; }
         public int ccdes { get; set; }
         public int cceso { get; set; }
-        public int ccmat { get; set; }
         public int ccnmat { get; set; }
         public int ccmath { get; set; }
         public int ccexc { get; set; }

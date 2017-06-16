@@ -132,7 +132,6 @@
           <Property Name="cchrst" Type="int" Nullable="false" />
           <Property Name="ccdes" Type="int" Nullable="false" />
           <Property Name="cceso" Type="int" Nullable="false" />
-          <Property Name="ccmat" Type="int" Nullable="false" />
           <Property Name="ccnmat" Type="int" Nullable="false" />
           <Property Name="ccmath" Type="int" Nullable="false" />
           <Property Name="ccexc" Type="int" Nullable="false" />
@@ -369,7 +368,6 @@
           <Property Name="cchrst" Type="Int32" Nullable="false" />
           <Property Name="ccdes" Type="Int32" Nullable="false" />
           <Property Name="cceso" Type="Int32" Nullable="false" />
-          <Property Name="ccmat" Type="Int32" Nullable="false" />
           <Property Name="ccnmat" Type="Int32" Nullable="false" />
           <Property Name="ccmath" Type="Int32" Nullable="false" />
           <Property Name="ccexc" Type="Int32" Nullable="false" />
@@ -516,7 +514,6 @@
                 <ScalarProperty Name="ccexc" ColumnName="ccexc" />
                 <ScalarProperty Name="ccmath" ColumnName="ccmath" />
                 <ScalarProperty Name="ccnmat" ColumnName="ccnmat" />
-                <ScalarProperty Name="ccmat" ColumnName="ccmat" />
                 <ScalarProperty Name="cceso" ColumnName="cceso" />
                 <ScalarProperty Name="ccdes" ColumnName="ccdes" />
                 <ScalarProperty Name="cchrst" ColumnName="cchrst" />
