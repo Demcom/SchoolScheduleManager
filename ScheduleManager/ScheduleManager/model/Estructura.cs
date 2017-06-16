@@ -24,7 +24,6 @@ namespace ScheduleManager.model
         public string cccatcve { get; set; }
         public int ccplmhrs { get; set; }
         public int cchfglic { get; set; }
-        public int cchgpos { get; set; }
         public int ccdes { get; set; }
         public Nullable<bool> ccfac { get; set; }
         public string ccmot { get; set; }
@@ -40,5 +39,6 @@ namespace ScheduleManager.model
         public string ccacdnco { get; set; }
         public int ccacdhrs { get; set; }
         public string ccmatnom { get; set; }
+        public int cchfgpos { get; set; }
     }
 }

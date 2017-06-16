@@ -87,7 +87,7 @@
           <Property Name="cccatcve" Type="varchar" MaxLength="6" />
           <Property Name="ccplmhrs" Type="int" Nullable="false" />
           <Property Name="cchfglic" Type="int" Nullable="false" />
-          <Property Name="cchgpos" Type="int" Nullable="false" />
+          <Property Name="cchfgpos" Type="int" Nullable="false" />
           <Property Name="ccdes" Type="int" Nullable="false" />
           <Property Name="ccfac" Type="bit" />
           <Property Name="ccmot" Type="varchar" MaxLength="50" />
@@ -338,7 +338,6 @@
           <Property Name="cccatcve" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="ccplmhrs" Type="Int32" Nullable="false" />
           <Property Name="cchfglic" Type="Int32" Nullable="false" />
-          <Property Name="cchgpos" Type="Int32" Nullable="false" />
           <Property Name="ccdes" Type="Int32" Nullable="false" />
           <Property Name="ccfac" Type="Boolean" />
           <Property Name="ccmot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -354,6 +353,7 @@
           <Property Name="ccacdnco" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="ccacdhrs" Type="Int32" Nullable="false" />
           <Property Name="ccmatnom" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="cchfgpos" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="PersonalFrenteAGrupo">
           <Key>
@@ -478,6 +478,7 @@
           <EntitySetMapping Name="Estructura">
             <EntityTypeMapping TypeName="ScheduleManagerModel.Estructura">
               <MappingFragment StoreEntitySet="Estructura">
+                <ScalarProperty Name="cchfgpos" ColumnName="cchfgpos" />
                 <ScalarProperty Name="ccmatnom" ColumnName="ccmatnom" />
                 <ScalarProperty Name="ccacdhrs" ColumnName="ccacdhrs" />
                 <ScalarProperty Name="ccacdnco" ColumnName="ccacdnco" />
@@ -493,7 +494,6 @@
                 <ScalarProperty Name="ccmot" ColumnName="ccmot" />
                 <ScalarProperty Name="ccfac" ColumnName="ccfac" />
                 <ScalarProperty Name="ccdes" ColumnName="ccdes" />
-                <ScalarProperty Name="cchgpos" ColumnName="cchgpos" />
                 <ScalarProperty Name="cchfglic" ColumnName="cchfglic" />
                 <ScalarProperty Name="ccplmhrs" ColumnName="ccplmhrs" />
                 <ScalarProperty Name="cccatcve" ColumnName="cccatcve" />
