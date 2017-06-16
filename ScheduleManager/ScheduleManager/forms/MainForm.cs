@@ -31,5 +31,20 @@ namespace ScheduleManager
         {
 
         }
+
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.personalExcelToDB();
+        }
+
+        private void personalFrenteAGrupoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.personalFrenteAGrupoExcelToDB();
+        }
+
+        private void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.EstructuraExcelToDB();
+        }
     }
 }
