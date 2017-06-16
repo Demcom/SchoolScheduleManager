@@ -129,8 +129,6 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.Personals.Add(p);
                     context.SaveChanges();
-
-                    Console.WriteLine(p);
                 }
             }
         }
@@ -164,8 +162,6 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.PersonalFrenteAGrupo.Add(p);
                     context.SaveChanges();
-
-                    Console.WriteLine(p);
                 }
             }
         }
@@ -212,8 +208,6 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.Estructura.Add(p);
                     context.SaveChanges();
-
-                    Console.WriteLine(p);
                 }
             }
         }
