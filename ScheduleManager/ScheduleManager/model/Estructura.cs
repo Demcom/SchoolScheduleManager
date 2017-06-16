@@ -20,7 +20,7 @@ namespace ScheduleManager.model
         public int ccpertar { get; set; }
         public string ccpernom { get; set; }
         public int ccplmcve { get; set; }
-        public System.DateTime ccperara { get; set; }
+        public Nullable<System.DateTime> ccperara { get; set; }
         public string cccatcve { get; set; }
         public int ccplmhrs { get; set; }
         public int cchfglic { get; set; }
