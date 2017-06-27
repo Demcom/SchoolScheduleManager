@@ -34,9 +34,10 @@
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.personalFrenteAGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.distribuciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +82,8 @@
             this.importarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personalToolStripMenuItem,
             this.personalFrenteAGrupoToolStripMenuItem,
-            this.estructuraToolStripMenuItem});
+            this.estructuraToolStripMenuItem,
+            this.distribuciónToolStripMenuItem});
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
             this.importarToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.importarToolStripMenuItem.Text = "Importar";
@@ -92,15 +94,6 @@
             this.personalToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.personalToolStripMenuItem.Text = "Personal";
             this.personalToolStripMenuItem.Click += new System.EventHandler(this.personalToolStripMenuItem_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 121);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(901, 444);
-            this.dataGridView1.TabIndex = 1;
             // 
             // personalFrenteAGrupoToolStripMenuItem
             // 
@@ -115,6 +108,22 @@
             this.estructuraToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.estructuraToolStripMenuItem.Text = "Estructura";
             this.estructuraToolStripMenuItem.Click += new System.EventHandler(this.estructuraToolStripMenuItem_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(159, 121);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(901, 444);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // distribuciónToolStripMenuItem
+            // 
+            this.distribuciónToolStripMenuItem.Name = "distribuciónToolStripMenuItem";
+            this.distribuciónToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.distribuciónToolStripMenuItem.Text = "Distribución";
+            this.distribuciónToolStripMenuItem.Click += new System.EventHandler(this.distribuciónToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -147,6 +156,7 @@
         private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personalFrenteAGrupoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estructuraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem distribuciónToolStripMenuItem;
     }
 }
 

@@ -46,5 +46,10 @@ namespace ScheduleManager
         {
             ExcelReader.EstructuraExcelToDB();
         }
+
+        private void distribuciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.DistribucionExcelToDB();
+        }
     }
 }
