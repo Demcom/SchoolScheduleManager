@@ -224,7 +224,6 @@ namespace ScheduleManager.tools
                 {
                     Distribucion d = new Distribucion()
                     {
-                        Id = getInt(dataRow["Id"]),
                         ccdepcve = getNullableInt(dataRow["ccdepcve"]),
                         ccpercve = getInt(dataRow["ccpercve"]),
                         ccpertar = getNullableInt(dataRow["ccpertar"]),
