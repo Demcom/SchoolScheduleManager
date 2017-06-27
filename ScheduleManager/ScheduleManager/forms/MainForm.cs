@@ -32,24 +32,45 @@ namespace ScheduleManager
 
         }
 
-        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void personalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExcelReader.personalExcelToDB();
+            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
+            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+            await Task.Run(() => ExcelReader.personalExcelToDB(progress, path));
         }
 
-        private void personalFrenteAGrupoToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void personalFrenteAGrupoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExcelReader.personalFrenteAGrupoExcelToDB();
+            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
+            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+            await Task.Run(() => ExcelReader.personalFrenteAGrupoExcelToDB(progress, path));
         }
 
-        private void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExcelReader.EstructuraExcelToDB();
+            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
+            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+            await Task.Run(() => ExcelReader.EstructuraExcelToDB(progress, path));
         }
 
-        private void distribuciónToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void distribuciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExcelReader.DistribucionExcelToDB();
+            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
+            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+            await Task.Run(() => ExcelReader.DistribucionExcelToDB(progress, path));
+        }
+
+        void updateProgressBarImporting(int percent)
+        {
+            importarToolStripMenuItem.Enabled = false;
+            toolStripStatusLabel1.Text = percent + "%" + " Importando...";
+            toolStripProgressBar1.Value = percent;
+
+            if (percent == 100)
+            {
+                toolStripStatusLabel1.Text = "Terminado";
+                importarToolStripMenuItem.Enabled = true;
+            }
         }
     }
 }
