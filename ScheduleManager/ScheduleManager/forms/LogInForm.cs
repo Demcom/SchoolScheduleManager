@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScheduleManager.common;
 using ScheduleManager.model;
+using ScheduleManager.forms;
 
 namespace ScheduleManager.forms
 {
@@ -47,10 +48,24 @@ namespace ScheduleManager.forms
 
                 if (user != null)
                 {
-                    //Abrir forma
-                    UserAddForm form = new UserAddForm();
-                    form.Show();
-                    this.Hide();
+                    //Si es administrador
+                    if (user.Cuenta.id_cuenta == 1)
+                    {
+                        //Abrir forma
+                        Form1 form = new Form1(1);
+                        form.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        //Abrir forma
+                        Form1 form = new Form1(2);
+                        form.Show();
+                        this.Hide();
+                    }
+
+
+                    
                 }
                 else
                 {
