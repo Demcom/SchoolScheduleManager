@@ -48,6 +48,20 @@ namespace ScheduleManager.common
 
         }
 
+        public string getFilePath(string fileFormat)
+        {
+            string path = "";
+
+            lazyInitComponents();
+            openFileDialog.Filter = fileFormat;
+
+            DialogResult dialogResult = openFileDialog.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+                path = openFileDialog.FileName;
+
+            return path;
+        }
+
         private void lazyInitComponents() {
             if (openFileDialog == null) {
                 openFileDialog = new OpenFileDialog();

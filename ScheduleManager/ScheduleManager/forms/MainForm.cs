@@ -52,5 +52,25 @@ namespace ScheduleManager
             //Abrir una nueva de ventana de UserAddForm
             objForma.Show();
         }
+
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.personalExcelToDB();
+        }
+
+        private void personalFrenteAGrupoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.personalFrenteAGrupoExcelToDB();
+        }
+
+        private void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.EstructuraExcelToDB();
+        }
+
+        private void distribuciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcelReader.DistribucionExcelToDB();
+        }
     }
 }
