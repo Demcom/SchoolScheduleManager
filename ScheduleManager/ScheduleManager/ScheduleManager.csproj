@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="common\Encriptar.cs" />
     <Compile Include="common\FileBrowser.cs" />
+    <Compile Include="common\SingletonSesion.cs" />
     <Compile Include="common\Usuarios.cs" />
     <Compile Include="enums\FileFormatsEnum.cs" />
     <Compile Include="forms\LogInForm.cs">
