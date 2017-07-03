@@ -103,10 +103,8 @@ namespace ScheduleManager.tools
             }
         }
 
-        public static void personalExcelToDB()
+        public static void personalExcelToDB(IProgress<int> progress, string path)
         {
-            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-
             if (path != "")
             {
                 DataTable result = ExcelReader.GetExcelWorksheet(path, "32200");
@@ -129,14 +127,15 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.Personals.Add(p);
                     context.SaveChanges();
+
+                    int recordNum = result.Rows.IndexOf(dataRow) + 1;
+                    progress.Report(100 * recordNum / result.Rows.Count);
                 }
             }
         }
 
-        public static void personalFrenteAGrupoExcelToDB()
+        public static void personalFrenteAGrupoExcelToDB(IProgress<int> progress, string path)
         {
-            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-
             if (path != "")
             {
                 DataTable result = ExcelReader.GetExcelWorksheet(path, "32200");
@@ -162,14 +161,15 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.PersonalFrenteAGrupo.Add(p);
                     context.SaveChanges();
+
+                    int recordNum = result.Rows.IndexOf(dataRow) + 1;
+                    progress.Report(100 * recordNum / result.Rows.Count);
                 }
             }
         }
 
-        public static void EstructuraExcelToDB()
+        public static void EstructuraExcelToDB(IProgress<int> progress, string path)
         {
-            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-
             if (path != "")
             {
                 DataTable result = ExcelReader.GetExcelWorksheet(path, "32200");
@@ -208,14 +208,15 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.Estructura.Add(p);
                     context.SaveChanges();
+
+                    int recordNum = result.Rows.IndexOf(dataRow) + 1;
+                    progress.Report(100 * recordNum / result.Rows.Count);
                 }
             }
         }
 
-        public static void DistribucionExcelToDB()
+        public static void DistribucionExcelToDB(IProgress<int> progress, string path)
         {
-            string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-
             if (path != "")
             {
                 DataTable result = ExcelReader.GetExcelWorksheet(path, "32200");
@@ -284,6 +285,9 @@ namespace ScheduleManager.tools
                     ScheduleManagerEntities context = new ScheduleManagerEntities();
                     context.Distribucion.Add(d);
                     context.SaveChanges();
+
+                    int recordNum = result.Rows.IndexOf(dataRow) + 1;
+                    progress.Report(100 * recordNum / result.Rows.Count);
                 }
             }
         }
