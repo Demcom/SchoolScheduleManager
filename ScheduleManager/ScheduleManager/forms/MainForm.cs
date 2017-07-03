@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,7 @@ namespace ScheduleManager
         {
             InitializeComponent();
             this.tipoUsuario = tipoUsuario;
+ 
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,8 +37,7 @@ namespace ScheduleManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Si el tipo de usuario es administrador activar sus funcionalidades
-            if(tipoUsuario == 1)
+            if (tipoUsuario == 1)
             { 
                 cuentaToolStripMenuItem.Visible = true;
             }
@@ -66,11 +67,23 @@ namespace ScheduleManager
         private void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcelReader.EstructuraExcelToDB();
+            dataGridView1.DataSource = bindingSource1;
+            dataGridView1.DataMember = "Estructura";
+            estructuraTableAdapter.Fill(this.scheduleManagerDataSet.Estructura);       
         }
 
         private void distribuciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcelReader.DistribucionExcelToDB();
+            dataGridView1.DataSource = bindingSource1;
+            dataGridView1.DataMember = "Distribucion";
+            distribucionTableAdapter.Fill(this.scheduleManagerDataSet.Distribucion);
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TestData td = new TestData();
+            td.Show();
         }
     }
 }
