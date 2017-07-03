@@ -34,7 +34,7 @@ namespace ScheduleManager.forms
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //Salir de aplicación
-            Application.Exit();
+            this.Close();
         }
 
         private void listarCuentas()
