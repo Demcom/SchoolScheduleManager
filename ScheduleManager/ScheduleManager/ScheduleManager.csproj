@@ -87,6 +87,12 @@
     <Compile Include="common\SingletonSesion.cs" />
     <Compile Include="common\Usuarios.cs" />
     <Compile Include="enums\FileFormatsEnum.cs" />
+    <Compile Include="forms\FiltroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FiltroForm.Designer.cs">
+      <DependentUpon>FiltroForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +104,6 @@
     </Compile>
     <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\TestData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\TestData.Designer.cs">
-      <DependentUpon>TestData.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\UserAddForm.cs">
       <SubType>Form</SubType>
@@ -153,14 +153,14 @@
       <DependentUpon>ScheduleManagerDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="tools\ExcelReader.cs" />
+    <EmbeddedResource Include="forms\FiltroForm.resx">
+      <DependentUpon>FiltroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\TestData.resx">
-      <DependentUpon>TestData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UserAddForm.resx">
       <DependentUpon>UserAddForm.cs</DependentUpon>
