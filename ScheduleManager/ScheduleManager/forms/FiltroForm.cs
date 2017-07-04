@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ScheduleManager.forms
 {
-    public partial class TestData : Form
+    public partial class FiltroForm : Form
     {
-        public TestData()
+        public FiltroForm()
         {
             InitializeComponent();
-        }
-
-        private void TestData_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'scheduleManagerDataSet.Estructura' Puede moverla o quitarla según sea necesario.
-            this.estructuraTableAdapter.Fill(this.scheduleManagerDataSet.Estructura);
-
         }
     }
 }
