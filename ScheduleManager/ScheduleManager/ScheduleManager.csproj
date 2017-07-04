@@ -99,11 +99,11 @@
     <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\TestData.cs">
+    <Compile Include="forms\FiltroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\TestData.Designer.cs">
-      <DependentUpon>TestData.cs</DependentUpon>
+    <Compile Include="forms\FiltroForm.Designer.cs">
+      <DependentUpon>FiltroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\UserAddForm.cs">
       <SubType>Form</SubType>
@@ -159,8 +159,8 @@
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\TestData.resx">
-      <DependentUpon>TestData.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FiltroForm.resx">
+      <DependentUpon>FiltroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UserAddForm.resx">
       <DependentUpon>UserAddForm.cs</DependentUpon>
@@ -241,7 +241,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
