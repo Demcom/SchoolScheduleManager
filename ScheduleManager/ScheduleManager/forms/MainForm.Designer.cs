@@ -35,7 +35,6 @@
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,9 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.estructuraTableAdapter = new ScheduleManager.ScheduleManagerDataSetTableAdapters.EstructuraTableAdapter();
             this.distribucionTableAdapter = new ScheduleManager.ScheduleManagerDataSetTableAdapters.DistribucionTableAdapter();
+            this.personalFrenteAGrupoTableAdapter = new ScheduleManager.ScheduleManagerDataSetTableAdapters.PersonalFrenteAGrupoTableAdapter();
+            this.personalTableAdapter = new ScheduleManager.ScheduleManagerDataSetTableAdapters.PersonalTableAdapter();
+            this.filtrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleManagerDataSet)).BeginInit();
@@ -71,8 +73,7 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.nuevoToolStripMenuItem,
-            this.salirToolStripMenuItem,
-            this.testToolStripMenuItem});
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -105,18 +106,13 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
             // editarToolStripMenuItem
             // 
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filtrarToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.editarToolStripMenuItem.Text = "Ventana";
             // 
             // importarToolStripMenuItem
             // 
@@ -161,6 +157,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 28);
             this.dataGridView1.Name = "dataGridView1";
@@ -186,6 +185,21 @@
             // 
             this.distribucionTableAdapter.ClearBeforeFill = true;
             // 
+            // personalFrenteAGrupoTableAdapter
+            // 
+            this.personalFrenteAGrupoTableAdapter.ClearBeforeFill = true;
+            // 
+            // personalTableAdapter
+            // 
+            this.personalTableAdapter.ClearBeforeFill = true;
+            // 
+            // filtrarToolStripMenuItem
+            // 
+            this.filtrarToolStripMenuItem.Name = "filtrarToolStripMenuItem";
+            this.filtrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.filtrarToolStripMenuItem.Text = "Filtrar";
+            this.filtrarToolStripMenuItem.Click += new System.EventHandler(this.filtrarToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,7 +209,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Schedule Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -221,12 +235,14 @@
         private System.Windows.Forms.ToolStripMenuItem personalFrenteAGrupoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estructuraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem distribuciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ScheduleManagerDataSet scheduleManagerDataSet;
         private System.Windows.Forms.BindingSource bindingSource1;
         private ScheduleManagerDataSetTableAdapters.EstructuraTableAdapter estructuraTableAdapter;
         private ScheduleManagerDataSetTableAdapters.DistribucionTableAdapter distribucionTableAdapter;
+        private ScheduleManagerDataSetTableAdapters.PersonalFrenteAGrupoTableAdapter personalFrenteAGrupoTableAdapter;
+        private ScheduleManagerDataSetTableAdapters.PersonalTableAdapter personalTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem filtrarToolStripMenuItem;
     }
 }
 

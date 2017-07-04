@@ -63,11 +63,17 @@ namespace ScheduleManager
         private void personalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcelReader.personalExcelToDB();
+            dataGridView1.DataSource = bindingSource1;
+            dataGridView1.DataMember = "Personal";
+            personalTableAdapter.Fill(this.scheduleManagerDataSet.Personal);
         }
 
         private void personalFrenteAGrupoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcelReader.personalFrenteAGrupoExcelToDB();
+            dataGridView1.DataSource = bindingSource1;
+            dataGridView1.DataMember = "Distribucion";
+            personalFrenteAGrupoTableAdapter.Fill(this.scheduleManagerDataSet.PersonalFrenteAGrupo);
         }
 
         private void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,10 +92,10 @@ namespace ScheduleManager
             distribucionTableAdapter.Fill(this.scheduleManagerDataSet.Distribucion);
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        private void filtrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TestData td = new TestData();
-            td.Show();
+            FiltroForm filtro = new FiltroForm();
+            filtro.Show();
         }
     }
 }
