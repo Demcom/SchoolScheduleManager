@@ -24,6 +24,12 @@ namespace ScheduleManager
         public Form1(int tipoUsuario)
         {
             InitializeComponent();
+            dataGridView1.Anchor =
+                AnchorStyles.Bottom | 
+                AnchorStyles.Right |
+                AnchorStyles.Top | 
+                AnchorStyles.Left;
+
             this.tipoUsuario = tipoUsuario;
  
         }
