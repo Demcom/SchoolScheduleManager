@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ScheduleManager.common;
 using ScheduleManager.tools;
 using ScheduleManager.forms;
+using ScheduleManager.exceptions;
 
 namespace ScheduleManager
 {
@@ -56,29 +57,73 @@ namespace ScheduleManager
         private async void personalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
-            await Task.Run(() => ExcelReader.personalExcelToDB(progress, path));
+            if (path != "")
+            {
+                var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+
+                try
+                {
+                    await Task.Run(() => ExcelReader.personalExcelToDB(progress, path));
+                }
+                catch (BadExcelFormatException)
+                {
+                    MessageBox.Show("El documento no tiene el formato esperado.", "Documento mal formado.");
+                }
+            }
         }
 
         private async void personalFrenteAGrupoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
-            await Task.Run(() => ExcelReader.personalFrenteAGrupoExcelToDB(progress, path));
+            if (path != "")
+            {
+                var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+
+                try
+                {
+                    await Task.Run(() => ExcelReader.personalFrenteAGrupoExcelToDB(progress, path));
+                }
+                catch (BadExcelFormatException)
+                {
+                    MessageBox.Show("El documento no tiene el formato esperado.", "Documento mal formado.");
+                }
+            }
         }
 
         private async void estructuraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
-            await Task.Run(() => ExcelReader.EstructuraExcelToDB(progress, path));
+            if (path != "")
+            {
+                var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+
+                try
+                {
+                    await Task.Run(() => ExcelReader.EstructuraExcelToDB(progress, path));
+                }
+                catch (BadExcelFormatException)
+                {
+                    MessageBox.Show("El documento no tiene el formato esperado.", "Documento mal formado.");
+                }
+            }
         }
 
         private async void distribuciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
-            var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
-            await Task.Run(() => ExcelReader.DistribucionExcelToDB(progress, path));
+            if (path != "")
+            {
+                var progress = new Progress<int>(percent => updateProgressBarImporting(percent));
+
+                try
+                {
+                    await Task.Run(() => ExcelReader.DistribucionExcelToDB(progress, path));
+                }
+                catch (BadExcelFormatException)
+                {
+                    MessageBox.Show("El documento no tiene el formato esperado.", "Documento mal formado.");
+                }
+            }
         }
 
         void updateProgressBarImporting(int percent)
