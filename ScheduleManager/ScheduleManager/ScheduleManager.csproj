@@ -93,6 +93,7 @@
     <Compile Include="forms\FiltroForm.Designer.cs">
       <DependentUpon>FiltroForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="exceptions\BadExcelFormatException.cs" />
     <Compile Include="forms\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
