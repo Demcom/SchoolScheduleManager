@@ -70,5 +70,6 @@ namespace ScheduleManager.model
         public int ccpdo9b { get; set; }
         public int ccpdo10a { get; set; }
         public int ccpdo10b { get; set; }
+        public string fecha { get; set; }
     }
 }

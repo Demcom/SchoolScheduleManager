@@ -67,6 +67,7 @@ namespace ScheduleManager
             // dataGridView1.DataSource = bindingSource1;
             // dataGridView1.DataMember = "Personal";
             // personalTableAdapter.Fill(this.scheduleManagerDataSet.Personal);
+          
             string path = FileBrowser.Instance.getFilePath(FileFormatsEnum.EXCELFILES);
             if (path != "")
             {
@@ -163,6 +164,12 @@ namespace ScheduleManager
             FiltroForm filtro = new FiltroForm();
             filtro.Show();
         }
-        
+
+        private void mostrarDistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bindingSource1;
+            dataGridView1.DataMember = "Distribucion";
+            personalFrenteAGrupoTableAdapter.Fill(this.scheduleManagerDataSet.PersonalFrenteAGrupo);
+        }
     }
 }

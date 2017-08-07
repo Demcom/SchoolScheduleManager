@@ -72,6 +72,7 @@
           <Property Name="ccpdo9b" Type="int" Nullable="false" />
           <Property Name="ccpdo10a" Type="int" Nullable="false" />
           <Property Name="ccpdo10b" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Estructura">
           <Key>
@@ -323,6 +324,7 @@
           <Property Name="ccpdo9b" Type="Int32" Nullable="false" />
           <Property Name="ccpdo10a" Type="Int32" Nullable="false" />
           <Property Name="ccpdo10b" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Estructura">
           <Key>
@@ -416,6 +418,7 @@
           <EntitySetMapping Name="Distribucion">
             <EntityTypeMapping TypeName="ScheduleManagerModel.Distribucion">
               <MappingFragment StoreEntitySet="Distribucion">
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
                 <ScalarProperty Name="ccpdo10b" ColumnName="ccpdo10b" />
                 <ScalarProperty Name="ccpdo10a" ColumnName="ccpdo10a" />
                 <ScalarProperty Name="ccpdo9b" ColumnName="ccpdo9b" />

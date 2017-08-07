@@ -224,12 +224,13 @@ namespace ScheduleManager.tools
         public static void DistribucionExcelToDB(IProgress<int> progress, string path)
         {
             DataTable result = ExcelReader.GetExcelWorksheet(path, "32200");
+            DateTime myDateTime = DateTime.Now;
+            string sqlFormattedDate = myDateTime.ToString("dd-MM-yyyy");
 
             if (!isDistribucionTable(result.Columns))
             {
                 throw new BadExcelFormatException();
             }
-
             foreach (DataRow dataRow in result.Rows)
             {
                 Distribucion d = new Distribucion()
@@ -288,7 +289,8 @@ namespace ScheduleManager.tools
                     ccpdo9a = getInt(dataRow["ccpdo9a"]),
                     ccpdo9b = getInt(dataRow["ccpdo9b"]),
                     ccpdo10a = getInt(dataRow["ccpdo10a"]),
-                    ccpdo10b = getInt(dataRow["ccpdo10b"])
+                    ccpdo10b = getInt(dataRow["ccpdo10b"]),
+                    fecha = sqlFormattedDate
                 };
 
                 ScheduleManagerEntities context = new ScheduleManagerEntities();
