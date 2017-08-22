@@ -87,6 +87,13 @@
     <Compile Include="common\SingletonSesion.cs" />
     <Compile Include="common\Usuarios.cs" />
     <Compile Include="enums\FileFormatsEnum.cs" />
+    <Compile Include="forms\FiltroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FiltroForm.Designer.cs">
+      <DependentUpon>FiltroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exceptions\BadExcelFormatException.cs" />
     <Compile Include="forms\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,7 +148,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleManagerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleManagerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tools\ExcelReader.cs" />
+    <EmbeddedResource Include="forms\FiltroForm.resx">
+      <DependentUpon>FiltroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +192,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ScheduleManagerDataSet.xsc">
+      <DependentUpon>ScheduleManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleManagerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleManagerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleManagerDataSet.xss">
+      <DependentUpon>ScheduleManagerDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -216,7 +242,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
