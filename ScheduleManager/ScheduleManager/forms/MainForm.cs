@@ -13,6 +13,7 @@ using ScheduleManager.common;
 using ScheduleManager.tools;
 using ScheduleManager.forms;
 using ScheduleManager.exceptions;
+using ScheduleManager.model;
 
 namespace ScheduleManager
 {
@@ -21,7 +22,7 @@ namespace ScheduleManager
         //Variables
         private UserAddForm objForma = new UserAddForm();
         private int tipoUsuario;
-
+        private ScheduleManagerEntities context;
         public Form1(int tipoUsuario)
         {
             InitializeComponent();
@@ -30,8 +31,9 @@ namespace ScheduleManager
                 AnchorStyles.Right |
                 AnchorStyles.Top |
                 AnchorStyles.Left;
-
             this.tipoUsuario = tipoUsuario;
+            this.context = new ScheduleManagerEntities();
+
 
         }
 
@@ -76,6 +78,8 @@ namespace ScheduleManager
                 try
                 {
                     await Task.Run(() => ExcelReader.personalExcelToDB(progress, path));
+                    var pers = context.Personal.ToList();
+                    dataGridView1.DataSource = pers;    
                 }
                 catch (BadExcelFormatException)
                 {
@@ -94,6 +98,8 @@ namespace ScheduleManager
                 try
                 {
                     await Task.Run(() => ExcelReader.personalFrenteAGrupoExcelToDB(progress, path));
+                    var group = context.PersonalFrenteAGrupo.ToList();
+                    dataGridView1.DataSource = group;    
                 }
                 catch (BadExcelFormatException)
                 {
@@ -116,6 +122,8 @@ namespace ScheduleManager
                 try
                 {
                     await Task.Run(() => ExcelReader.EstructuraExcelToDB(progress, path));
+                    var struc = context.Estructura.ToList();
+                    dataGridView1.DataSource = struc;    
                 }
                 catch (BadExcelFormatException)
                 {
@@ -138,6 +146,8 @@ namespace ScheduleManager
                 try
                 {
                     await Task.Run(() => ExcelReader.DistribucionExcelToDB(progress, path));
+                    var dist = context.Distribucion.ToList();
+                    dataGridView1.DataSource = dist;    
                 }
                 catch (BadExcelFormatException)
                 {
