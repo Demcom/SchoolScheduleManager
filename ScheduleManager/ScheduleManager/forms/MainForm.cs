@@ -78,7 +78,7 @@ namespace ScheduleManager
                 try
                 {
                     await Task.Run(() => ExcelReader.personalExcelToDB(progress, path));
-                    var pers = context.Personal.ToList();
+                    var pers = context.Personals.ToList();
                     dataGridView1.DataSource = pers;    
                 }
                 catch (BadExcelFormatException)
